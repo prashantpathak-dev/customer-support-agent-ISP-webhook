@@ -20,7 +20,7 @@ def test_get_config():
     assert response.status_code == 200
     params = response.json()["sessionInfo"]["parameters"]
     assert params["config_fetched"] is True
-    assert "throttle_playbook" in params
+    assert "outage_service_active" in params
 
 def test_outage_check_active():
     payload = {
